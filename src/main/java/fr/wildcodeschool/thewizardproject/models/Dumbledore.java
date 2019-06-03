@@ -1,29 +1,20 @@
 package fr.wildcodeschool.thewizardproject.models;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Dumbledore implements WizardInterface {
-    private Outfit outfitAdvice;
+    @Autowired
+    Outfit dress;
 
-    // Constructor with the cosyDrinkAdvice object passed as an argument
-    public Dumbledore(Outfit theOutfitAdvice) {
-        outfitAdvice = theOutfitAdvice;
-    }
-
-
-    public String displayRetourString(){
-        return this.outfitAdvice.retourString();
-    }
 
     @Override
     public String giveAdvice(){
-        return "Suit grey";
+        return "Suit blue";
     }
 
     @Override
     public String changeDress() {
-        return "ok";
+        return dress.retourString();
     }
-
-
-
 
 }

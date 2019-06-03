@@ -1,18 +1,11 @@
 package fr.wildcodeschool.thewizardproject.models;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Gandalf implements WizardInterface {
 
-    private Outfit outfitAdvice;
-
-    // Constructor with the cosyDrinkAdvice object passed as an argument
-    public Gandalf(Outfit theOutfitAdvice) {
-        outfitAdvice = theOutfitAdvice;
-    }
-
-
-    public String displayRetourString(){
-        return this.outfitAdvice.retourString();
-    }
+    @Autowired
+    Outfit dress;
 
     @Override
     public String giveAdvice() {
@@ -20,8 +13,8 @@ public class Gandalf implements WizardInterface {
     }
 
     @Override
-    public String changeDress(){
-        return "ok";
+    public String changeDress() {
+        return dress.retourString();
     }
 
 }
