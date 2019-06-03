@@ -3,8 +3,7 @@ package fr.wildcodeschool.thewizardproject.models;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class Dumbledore implements WizardInterface {
-    @Autowired
-    Outfit dress;
+
 
 
     @Override
@@ -14,7 +13,7 @@ public class Dumbledore implements WizardInterface {
 
     @Override
     public String changeDress() {
-        return dress.retourString();
+        return "Blue";
     }
 
 }

@@ -4,8 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class Gandalf implements WizardInterface {
 
-    @Autowired
-    Outfit dress;
+
 
     @Override
     public String giveAdvice() {
@@ -14,7 +13,7 @@ public class Gandalf implements WizardInterface {
 
     @Override
     public String changeDress() {
-        return dress.retourString();
+        return "Red";
     }
 
 }
